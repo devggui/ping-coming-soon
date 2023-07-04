@@ -4,23 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" target="_blank">
+  <link rel="stylesheet" href="./styles/main.css" target="_blank">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <title>Frontend Mentor | Ping coming soon page</title>
 
 </head>
-<body>
+<body class="h-screen flex flex-col justify-between">
+  <main class="flex flex-col items-center justify-center p-10 h-full">
+    <img src="./images/logo.svg" alt="Logotipo escrito PING." class="mt-5 mb-10">
 
-  We are launching soon!
+    <h1 class="text-2xl text-[var(--Gray)] font-light">We are launching <span class="text-[var(--Very-Dark-Blue)] font-bold">soon!</span> </h1>
+  
+    <p class="text-base font-semibold text-[var(--Gray)] my-5">Subscribe and get notified</p>
+    
+    <form class="flex flex-col w-full text-center">
+      <input type="email" placeholder="Your email address..." id="email" class="w-full outline-none border border-solid border-[var(--Blue)] rounded-full px-6 py-3">
+      <span id="error" class="hidden text-sm font-light text-[var(--Light-Red)] mt-1 italic">Please provide a valid email address</span>
+      <button type="button" name="notify" onclick="isValidEmail()" class="w-full bg-[var(--Blue)] rounded-full px-6 py-3 my-3 text-white font-semibold">Notify Me</button>
+    </form>
 
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
+    <img src="./images/illustration-dashboard.png" alt="Imagem de uma tela" class="mt-10">
+  </main>
+  <footer class="flex flex-col mb-5 items-center justify-center">
+    <div class="flex flex-row w-full items-center justify-center mb-5">
+      <div class="p-2 mx-2 rounded-full border border-solid border-[var(--Pale-Blue)]">
+        <a href="https://pt-br.facebook.com/" target="_blank">
+          <img src="./images/facebook.svg" alt="">
+        </a>
+      </div>
+      <div class="p-2 mx-2 rounded-full border border-solid border-[var(--Pale-Blue)]">
+        <a href="https://twitter.com/login?lang=pt" target="_blank">
+          <img src="./images/twitter.svg" alt="">
+        </a>
+      </div>
+      <div class="p-2 mx-2 rounded-full border border-solid border-[var(--Pale-Blue)]">
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="./images/instagram.svg" alt="">
+        </a>
+      </div>
+    </div>
+    <p class="text-xs font-light text-[var(--Gray)]">&copy; Copyright Ping. All rights reserved.</p>
+  </footer>
+  <script src="./js/index.js"></script>
 </body>
 </html>
