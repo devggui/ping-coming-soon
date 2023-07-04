@@ -13,37 +13,39 @@
   <title>Frontend Mentor | Ping coming soon page</title>
 
 </head>
-<body class="h-screen flex flex-col justify-between">
-  <main class="flex flex-col items-center justify-center p-10 h-full">
+<body class="h-screen flex flex-col justify-between items-center">
+  <main class="flex flex-col items-center justify-center p-10 sm:p-5 h-full sm:max-w-2xl">
     <img src="./images/logo.svg" alt="Logotipo escrito PING." class="mt-5 mb-10">
 
-    <h1 class="text-2xl text-[var(--Gray)] font-light">We are launching <span class="text-[var(--Very-Dark-Blue)] font-bold">soon!</span> </h1>
+    <h1 class="text-2xl sm:text-4xl text-[var(--Gray)] font-light">We are launching <span class="text-[var(--Very-Dark-Blue)] font-bold">soon!</span> </h1>
   
     <p class="text-base font-semibold text-[var(--Gray)] my-5">Subscribe and get notified</p>
     
-    <form class="flex flex-col w-full text-center">
-      <input type="email" placeholder="Your email address..." id="email" class="w-full outline-none border border-solid border-[var(--Blue)] rounded-full px-6 py-3">
-      <span id="error" class="hidden text-sm font-light text-[var(--Light-Red)] mt-1 italic">Please provide a valid email address</span>
-      <button type="button" name="notify" onclick="isValidEmail()" class="w-full bg-[var(--Blue)] rounded-full px-6 py-3 my-3 text-white font-semibold">Notify Me</button>
+    <form class="flex flex-col sm:flex-row w-full text-center sm:items-center">
+      <div class="flex flex-col sm:text-left sm:w-full sm:relative">
+        <input type="email" placeholder="Your email address..." id="email" class="w-full outline-none border border-solid border-[var(--Blue)] rounded-full px-6 py-3">
+        <span id="error" class="hidden sm:absolute sm:-bottom-6 text-sm font-light text-[var(--Light-Red)] mt-1 italic">Please provide a valid email address</span>
+      </div>
+      <button type="button" name="notify" onclick="isValidEmail()" class="w-full sm:max-w-[12rem] sm:ml-4 bg-[var(--Blue)] rounded-full px-6 py-3 my-3 text-white font-semibold hover:bg-[var(--Pale-Blue)]">Notify Me</button>
     </form>
 
     <img src="./images/illustration-dashboard.png" alt="Imagem de uma tela" class="mt-10">
   </main>
-  <footer class="flex flex-col mb-5 items-center justify-center">
+  <footer class="flex flex-col mb-5 sm:mb-10 items-center justify-center">
     <div class="flex flex-row w-full items-center justify-center mb-5">
-      <div class="flex items-center justify-center w-10 h-10 p-2 mx-2 rounded-full border border-solid border-[var(--Pale-Blue)]">
-        <a href="https://pt-br.facebook.com/" target="_blank">          
-          <i class="fa-brands fa-facebook-f text-[var(--Blue)]"></i>
+      <div class="flex items-center justify-center w-10 h-10 p-2 mx-2 rounded-full border border-solid border-[var(--Pale-Blue)] cursor-pointer" id="social-media">
+        <a href="https://pt-br.facebook.com/" target="_blank">
+          <i class="fa-brands fa-facebook-f text-[var(--Blue)]" id="social-media-icon"></i>
         </a>
       </div>
-      <div class="flex items-center justify-center w-10 h-10 p-2 mx-2 rounded-full border border-solid border-[var(--Pale-Blue)]">
-        <a href="https://twitter.com/login?lang=pt" target="_blank">          
-          <i class="fa-brands fa-twitter text-[var(--Blue)]"></i>
+      <div class="flex items-center justify-center w-10 h-10 p-2 mx-2 rounded-full border border-solid border-[var(--Pale-Blue)] cursor-pointer" id="social-media">
+        <a href="https://twitter.com/login?lang=pt" target="_blank">
+          <i class="fa-brands fa-twitter text-[var(--Blue)]" id="social-media-icon"></i>
         </a>
       </div>
-      <div class="flex items-center justify-center w-10 h-10 p-2 mx-2 rounded-full border border-solid border-[var(--Pale-Blue)]">
-        <a href="https://www.instagram.com/" target="_blank">          
-          <i class="fa-brands fa-instagram text-[var(--Blue)]"></i>
+      <div class="flex items-center justify-center w-10 h-10 p-2 mx-2 rounded-full border border-solid border-[var(--Pale-Blue)] cursor-pointer" id="social-media">
+        <a href="https://www.instagram.com/" target="_blank">
+          <i class="fa-brands fa-instagram text-[var(--Blue)]" id="social-media-icon"></i>
         </a>
       </div>
     </div>

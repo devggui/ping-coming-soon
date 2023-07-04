@@ -33,3 +33,12 @@ html,
 body {
   font-family: 'Libre Franklin', sans-serif;
 }
+
+#social-media:hover {
+  background-color: var(--Blue);
+
+  #social-media-icon {
+    color: white;
+  }
+}
+
